@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+   </head>
 <body>
     <header>
-        <img src="img/bob.svg" alt="Blue origami bird logo">
-        <h1>Web Dev I</h1>
+        <img src="img/bob.svg" alt="Blue origami bird logo" class="birb">
+        <h1>Web Dev I
+            
+        </h1>
     </header>
     <main>
         <section>
-            <img src="img/avataaars.png" alt="Avatar picture of me">
+            <img class="portrait" src="img/avataaars.png" alt="Avatar picture of me">
             
-            <div>
+            <div class="info">
                 <p>Alexx Peer</p>
                 <p>Pittstown, NJ</p>
             </div>
         </section>
         <section>
             <!-- Bio section -->
-            <div> 
+            <div class="bio"> 
 
                 <p> I want to be...</p>
 
@@ -32,4 +41,8 @@
         </section>
     </main>
 </body>
+<footer class="footer">
+    <p>&copy; <span id="year"></span> Alexx Peer. All rights reserved.</p>
+</footer>
+
 </html>
