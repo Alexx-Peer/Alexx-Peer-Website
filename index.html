@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="css/style.css">
    </head>
 <body>
     <header>
@@ -21,14 +18,17 @@
     </header>
     <main>
         <section>
+            <!-- my Avatar -->
             <img class="portrait" src="img/avataaars.png" alt="Avatar picture of me">
-            
+
+            <!-- personal info -->
             <div class="info">
                 <p>Alexx Peer</p>
                 <p>Pittstown, NJ</p>
             </div>
         </section>
         <section>
+
             <!-- Bio section -->
             <div class="bio"> 
 
@@ -38,7 +38,46 @@
                 
                 
             </div>
+
         </section>
+
+        <!-- Hobbies section -->
+        <section id ="hobbies">
+            <h2>Hobbies</h2>
+
+            <!-- List of Hobbies -->
+            <ul id = "hobbies-list">
+                <li>Bartending</li>
+                <li>Painting Miniatures</li>
+                <li>Bike Riding</li>
+            </ul>
+        </section>
+
+        <section id ="photo-gallery">
+            <!-- Photos of hobbies  -->
+            <h2></h2>
+
+            <figure class = "photo">
+                <!-- bartending photo -->
+                <img src="/img/bartending-640w.jpg" alt="Man bartending">
+                <figcaption>Private Event Mixologist</figcaption>
+
+            </figure>
+
+            <figure class = "photo">
+                <!-- mini painting photo  -->
+                <img src="/img/painting-minis-640w.jpg" alt="paiting miniatures on a desk">
+                <figcaption>Miniature Painting</figcaption>
+            </figure>
+
+            <figure class = "photo">
+                <!-- bike riding photo -->
+                <img src="/img/bike-ride-640w.jpg" alt="Man riding on a bike">
+                <figcaption>Trail Biking</figcaption>
+            </figure>
+
+        </section>
+
     </main>
 </body>
 <footer class="footer">
