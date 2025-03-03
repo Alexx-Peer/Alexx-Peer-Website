@@ -90,3 +90,20 @@ footer {
     align-items: center; 
     text-align: center;
 }
+
+.article-head {
+    padding: 10px;
+    text-align: center;
+    font-family: "Atkinson Hyperlegible Next";
+    text-decoration: underline;
+    color: #4B444B;
+    background-color: transparent;
+    background-image: url('../img/swords-crossed.png'), url('../img/swords-crossed.png');
+    background-repeat: no-repeat;
+    background-position: left 10px center, right 10px center;
+    background-size: 50px 50px;
+}
+.article-body {
+    line-height: 2;
+
+}
