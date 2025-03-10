@@ -6,6 +6,10 @@
     --cream: #F2E1C2;
     --deep-red: #8C2C16;
 }
+/* * {
+    outline: 1px solid red;
+} */
+
 
 
 body {
@@ -32,8 +36,8 @@ header {
 .portrait {
     display: block;
     margin: auto;
-    width: 10%;
-    height: 10%;
+    width: 150px;
+    height: 150px;
 }
 footer {
     position: relative;
@@ -49,25 +53,35 @@ footer {
     font-size: 9pt;
 }
 .birb { 
-    width: 2%;
-    height: 2%;
+    width: 50px;
+    height: 50px;
 }
+            /* Hobbies list */
 #hobbies {
-background-color: var(--cream);
+    background-color: var(--cream);
+    color: var(--deep-red);
+    text-align: center;
+}
+#hobbies > h2 {
+    font-size: 32pt;
+    display: inline-block;
+    margin: 10px auto;
+    
 }
 .hobby-list {
     list-style-image: url('../img/swords-crossed.png');
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 200px;
     font-size: 18px;
     padding: 0;
     margin: 0;
     font-family: "Atkinson Hyperlegible Next";
+    text-align: left;
     color: var(--dark-gray);
 }
-
 .hobby-list li {
     /* makes sword bullet points */
     list-style: none;
@@ -82,9 +96,25 @@ background-color: var(--cream);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+            /* photo gallery */
+#photo-gallery {
+    text-align: center;
+    border-style:groove;
+    border-color: var(--dark-gray);
+    margin-top: 10px;
+    background-color: var(--cream);
+}
 #photo-gallery img { 
     width: 300px;
     height: auto;
+    
+}
+
+#photo-gallery > h2 {
+    font-size: 32pt;
+    color: var(--deep-red);
+    display: inline-block;
+    margin: 10px auto;
 }
 .photo figcaption {
     display: block;
@@ -93,24 +123,13 @@ background-color: var(--cream);
     font-size: 16px;
     color: #333;
 }
-#photo-gallery {
-    border-style:groove;
-    border-color: var(--dark-gray);
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center;
-    background-color: var(--cream);
-}
-
 .photo {
     display: flex;
     flex-direction: column;
     align-items: center; 
     text-align: center;
 }
-
+            /* article 1 */
 .article-head {
     padding: 10px;
     text-align: center;
@@ -133,10 +152,40 @@ background-color: var(--cream);
 
 }
 .dropcaps::first-letter{
-    font-size: 2.5em;
-    font-weight: bold;
+    font-family: cursive;
+    font-size: 3em;
+    font-weight: 200;
     float: left;
     margin-right: 8px;
     line-height: 1;
     color: #222;
+}
+
+/* smartphone size
+@media  (max-width: 390px) {
+    #photo-gallery >figure img {
+        width: 100%;
+    }
+} */
+
+/* tablet size */
+@media screen and (min-width: 60em) {
+    #photo-gallery >figure {
+       display: grid;
+       grid-template-columns: 2fr 1fr;
+    }
+    figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+    #new-article div {
+        max-width: 100%;
+        columns: 20rem;
+    }
+
+
 }
