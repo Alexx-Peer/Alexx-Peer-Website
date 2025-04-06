@@ -75,7 +75,7 @@
                 </figure>
             </div>
         </section>
-
+            <!-- Iframe Video  -->
         <section id="video">
             <h2>A Peak Into My Life</h2>
             <div class="video-container">
@@ -102,6 +102,58 @@
                 </div>
             </article>
         </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form name="contact" method="POST" data-netlify="true">
+              <fieldset>
+                <legend>Contact Form</legend>
+          
+                <p>
+                  <label for="name">Name (required):</label><br>
+                  <input type="text" id="name" name="name" required>
+                </p>
+          
+                <p>
+                  <label for="email">Email (required):</label><br>
+                  <input type="email" id="email" name="email" required>
+                </p>
+          
+                <p>
+                  <label for="phone">Phone (optional):</label><br>
+                  <input type="tel" id="phone" name="phone">
+                </p>
+          
+                <p>
+                  <label for="phone-type">Phone Type:</label><br>
+                  <select id="phone-type" name="phone-type">
+                    <option value="">--Select--</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="home">Home</option>
+                    <option value="work">Work</option>
+                  </select>
+                </p>
+          
+                <p>
+                  <label for="message">Message:</label><br>
+                  <textarea id="message" name="message" rows="5"></textarea>
+                </p>
+          
+                <p>Would you like a follow-up?</p>
+                <ul style="list-style: none; padding-left: 0;">
+                  <li>
+                    <label><input type="radio" name="followup" value="yes"> Yes</label>
+                  </li>
+                  <li>
+                    <label><input type="radio" name="followup" value="no"> No</label>
+                  </li>
+                </ul>
+          
+                <p>
+                  <button type="submit">Submit</button>
+                </p>
+              </fieldset>
+            </form>
+          </section>
     </main>
 </body>
 <!-- footer and copyright -->
