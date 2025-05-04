@@ -16,47 +16,21 @@ body {
 
 
 /* add some padding back to rest of page */
-main {
-    padding: 2vw;
 
-}
 
 /* navbar */
 .navbar {
-    background-color: var(--mushroom);
-    color: whitesmoke;
-    display: flex;
+    color: var(--mushroom);
+    display:flex;
     flex-direction: column;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
 }
-
-
-
-/* logo */
-.logo {
-    display: flex;
-    align-items: center;
-
-}
-
-.logo img {
-    height: 6vw;
-    width: 6vw;
-
-}
-
-.logo h1 {
-    font-size: 1.2em;
-}
-
 
 /* navigation list */
 .navbar-links li {
     list-style: none;
     display: block;
-    padding: 0.5em 0;
+    transition: 0.5s ease-in-out;
 }
 
 
@@ -66,28 +40,67 @@ main {
 */
 .navbar-links a {
     color: var(--deep-red);
-    background-color: var(--mushroom);
     font-size: 1.7rem;
     letter-spacing: 2px;
     text-decoration: none;
     display: inline-block;
+    transition: color 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
 }
+/* expands text on link hover */
 .navbar-links a:hover,
 .navbar-links a:focus {
-    filter: invert(1);
+    color: black;
+    letter-spacing: 15px;
+    transition: 0.5s ease-in-out;
     outline: none;
+}
+/* makes check box invisible */
+#menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+.menu-icon {
+    display: inline-block;
+    width: auto;
+    font-size: 4rem;
+    cursor: pointer;
+    color: var(--deep-red);
+}
+/* smooth transition when clicking links 
+    and opening menu*/
+.navbar-links {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    display: block;
+    transition: max-height 0.6s ease-out, opacity .2s ease-in;
+}
+/* retracts nav menu */
+#menu-toggle:checked + .menu-icon + .navbar-links {
+    max-height: 500px;
+    opacity: 1;
+}
+
+
+.navbar-links ul {
+    flex-direction: column;
+    background-color: var(--light-beige);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/* spaces nav bar items */
+.navbar-links ul li {
+    margin: 1rem 0;
 }
 
 
 
 
-
-
-/* 
-media query for non-mobile nav bar
-min-width set to width of nav elements 
-such that no text wraps 
-*/
+/* media query for non-mobile nav bar */
 
 @media screen and (min-width: 50rem) {
 
@@ -99,14 +112,27 @@ such that no text wraps
 
     }
     .navbar {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
     }
     .navbar ul {
         display: flex;
     }
-    .navbar-links a {
-        padding: .5rem;
-
+    
+    .navbar-links ul {
+        display: inline-flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
+    .navbar-links a {
+        padding: .625rem 3.125rem 0 3.125rem;
+    }
+      #menu-toggle + .menu-icon + .navbar-links {
+        display:block;
+    }
+   
+
+    
 }

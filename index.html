@@ -7,17 +7,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+<!-- favicon info -->
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/nav.css">
    </head>
 <body>
     <header>
+      <div class="logo">
+        <img src="img/initials-logo.svg" alt="initials A.P.">
+        <h1>Alexx Peer</h1>
+      </div>
+      
+      <!-- nav bar with hamburger drop-down list -->
       <nav class="navbar">
-        <div class="logo">
-          <img class="birb" src="img/bob.svg" alt="Blue origami bird logo">
-          <h1>Web Dev I</h1>
-        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      
         <div class="navbar-links">
           <ul>
             <li><a href="#bio">Bio</a></li>
@@ -31,29 +54,23 @@
     </header>
 
     <main>
-        <section>
-            <!-- my Avatar -->
-            <img class="portrait" src="img/avataaars.png" alt="Avatar picture of me">
 
-            <!-- personal info -->
-            <div class="info">
-                <p>Alexx Peer</p>
-                <p>Pittstown, NJ</p>
-            </div>
-        </section>
-        <section>
+      <!-- top of the page. portrait & bio -->
+      <div id="intro">
 
-            <!-- Bio section -->
-            <div class="bio" id="bio"> 
+        <!-- my portrait -->
+        <img class="portrait" id="portrait" src="/img/portrait.png" alt="portrait of a pretty handsome guy standing">
 
-                <p> I want to be...</p>
+        <!-- Bio section -->
+        <div class="bio" id="bio"> 
 
-                <p> a computer wizard &gt;:)</p>
-                
-                
-            </div>
+            <p>Hey there! Thanks for checking out my website.</p>
 
-        </section>
+            <p> a computer wizard &gt;:)</p>
+            
+        </div>
+
+      </div>
 
         <!-- Hobbies section -->
         <section id="hobbies">
@@ -100,7 +117,7 @@
                   src="https://www.youtube.com/embed/7Gg4dZCPeHg?autoplay=1"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="autoplay; encrypted-media"
+                  allow="encrypted-media"
                   allowfullscreen>
                 </iframe>
               </div>
@@ -190,10 +207,9 @@
             </form>
           </section>
     </main>
-</body>
-<!-- footer and copyright -->
-<footer class="footer">
+      <!-- footer and copyright -->
+  <footer class="footer">
     <p>&copy; <span id="year"></span> Alexx Peer. All rights reserved.</p>
-</footer>
-
+  </footer>
+</body>
 </html>
