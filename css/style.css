@@ -22,6 +22,7 @@ body {
         opacity: 1;
     }
 }
+
 header {
     text-align: center;
     font-size: 20pt;
@@ -209,9 +210,7 @@ footer {
     padding: 10px;
     text-align: center;
     font-family: "Atkinson Hyperlegible Next";
-    text-decoration: underline;
-    color: #4B444B;
-    background-color: transparent;
+    color: var(--deep-red);
     background-image: url('../img/swords-crossed.png'), url('../img/swords-crossed.png');
     background-repeat: no-repeat;
     background-position: left 10px center, right 10px center;
@@ -220,10 +219,19 @@ footer {
 .article-body {
     line-height: 2;
 }
+
 #new-article {
     border-top: 20px double var(--deep-red);
-
 }
+
+/* styles first line of p */
+.dropcaps::first-line {
+    font-weight: bold;
+    color: var(--deep-red);
+    letter-spacing: 1px;
+}
+
+  /* dropcaps first letter of p */
 .dropcaps::first-letter{
     font-family: cursive;
     font-size: 3em;
@@ -231,10 +239,36 @@ footer {
     float: left;
     margin-right: 8px;
     line-height: 1;
-    color: #222;
+    color: var(--deep-red);
 }
+/* style for map */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding: 10em 5em 20em 5em;
+  }
+  
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    right: 1em;
+    width: 70%;
+    height: 70%;
+    border-radius: 12px;
+  }
 
-
+  /* google map iframe sources */
+  .sources {
+    font-size: 10px; 
+  }
+  .sources a {
+    font-size: 10px;
+    color: var(--dark-gray);
+  }
+  .sources h3 {
+    color: var(--deep-red);
+  }
             /* Contact Form */
 #contact {
     background-color: var(--cream);
@@ -341,6 +375,18 @@ button[type="submit"]:hover {
         margin: auto;
         width: 30vw;
     }
+
+    /* spaces crossed swords properly on mobile */
+    .article-head {
+        padding: 2em;
+        text-align: center;
+        font-family: "Atkinson Hyperlegible Next";
+        color: var(--deep-red);
+        background-image: url('../img/swords-crossed.png'), url('../img/swords-crossed.png');
+        background-repeat: no-repeat;
+        background-position: left 1em center, right .5em center;
+        background-size: 50px 50px;
+    }
 }
 
 
@@ -403,7 +449,7 @@ button[type="submit"]:hover {
 
     #new-article div {
         max-width: 100%;
-        columns: 40rem;
+        columns: 30rem;
     }
     #contact form {
         max-width: 600px;
@@ -460,9 +506,38 @@ button[type="submit"]:hover {
 
     .article-body {
         line-height: 2;
-        display: flex;
+        display: inline-flex;
+    }
+    .dropcaps{
+        max-width: 300px;
+    }
+    #new-article div {
+        max-width: 100%;
+        columns: 5rem;
     }
 
+    /* fits map iFrame in desktop size */
+    .map-container {
+        padding: 100px;
+        border-radius: 12px;
+        resize: both;
+        overflow: auto;
+        width: 600px;
+        height: 400px;
+        max-width: 80vh;
+        max-height: 80vh;
+        border: 2px;
+        position: relative;
+    }
+    
+    .map-container iframe {
+        width: 98%;
+        height: 98%;
+        border-radius: 5px;
+        border: 0;
+        display: block;
+    }
+   
     .photo figcaption {
         display: flex;
         justify-content: center;
