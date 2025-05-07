@@ -40,6 +40,17 @@ footer {
 .footer {
     font-size: 9pt;
 }
+
+p {
+    padding: 0 2rem 0 .5rem;
+    line-height: 1.6;
+    text-indent: 2em;
+}
+.article-body p {
+    padding: 0 2rem 0 .5rem;
+    line-height: 1.6;
+    text-indent: 0;
+}
 .logo {
     display: flex;
     align-items: center;
@@ -96,6 +107,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
             /* photo gallery */
 #photo-gallery {
     text-align: center;
@@ -341,34 +353,43 @@ button[type="submit"]:hover {
       }
 
     .photo {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    /* positions figcaption on photo & styles caption*/
+    .photo figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: whitesmoke;
+    text-shadow: black 1px 0 10px;
+    text-align: center;
+    font-size: 1.5em;
+    opacity: 0;
+    pointer-events: none;
+    }
+    /* hover effect on img */
+    figure img:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.05);
+    /* img tint on hover */
+        filter: grayscale(100%) brightness(100%);
     }
 
-    .photo figcaption {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        margin-left: 1rem;
-        text-align: center;
-        border-top: 3px solid var(--mushroom);
-        border-bottom: 3px solid var(--mushroom);
-        width: 100%;
+/* figcaption only on img hover */
+    .photo img:hover + figcaption {
+        opacity: 1;
+        transform: translateY(-12rem);
+        transition: opacity 0.5s ease-in-out;        
     }
 
     figure img {    
         width: 100%;
         max-width: 100%;
-        transition: transform 0.4s ease, filter 0.4s ease;
+        transition: transform 0.3s ease;
     }
-    figure img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.1);
-    }
+
 
     #new-article div {
         max-width: 100%;
@@ -416,7 +437,7 @@ button[type="submit"]:hover {
 
 
 /* desktop size  */
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 70em) {
     #photos{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
