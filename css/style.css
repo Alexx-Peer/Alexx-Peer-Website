@@ -11,6 +11,7 @@
 body {
     font-family: "Atkinson Hyperlegible Next";
     background-color: var(--light-beige);
+    background-image: url("/img/asfalt-dark-texture.png");   
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
 }
@@ -27,25 +28,27 @@ header {
     color: var(--deep-red);
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    width: 100%;
-    padding: 5px;
-    color: #736E66;
-    background-color: #D9C5AC;
-}
-.footer {
-    font-size: 9pt;
-}
-
 p {
     padding: 0 2rem 0 .5rem;
     line-height: 1.6;
     text-indent: 2em;
 }
+
+footer {
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: var(--deep-red);
+    background-color: var(--cream);
+    background-image: url("/img/asfalt-dark-texture.png");   
+    padding: 2px;
+}
+.footer {
+    font-size: 9pt;
+   
+}
+
 .article-body p {
     padding: 0 2rem 0 .5rem;
     line-height: 1.6;
@@ -71,6 +74,7 @@ p {
 #hobbies {
     background-color: var(--cream);
     color: var(--deep-red);
+    background-image: url("/img/asfalt-dark-texture.png");   
     text-align: center;
 }
 #hobbies > h2 {
@@ -113,7 +117,7 @@ p {
     text-align: center;
     border-style:groove;
     border-color: var(--dark-gray);
-    background-color: var(--cream);
+    padding-bottom: 20px;
 }
 #photo-gallery img { 
     width: 300px;
@@ -143,10 +147,16 @@ p {
 }
 
             /* iframe Youtube Video */
+#video {
+    background-color: var(--cream);
+    background-image: url("/img/asfalt-dark-texture.png"); 
+    padding-bottom: 100px; 
+
+}
 #video h2 {
     font-size: 32pt;
     color: var(--deep-red);
-    margin: 20px auto;
+    margin: 0 0 20px 0;
     text-align: center;
 }
 .video-hover-container {
@@ -211,9 +221,7 @@ p {
     line-height: 2;
 }
 #new-article {
-    margin-top: 100px;
     border-top: 20px double var(--deep-red);
-    background-color: var(--cream);
 
 }
 .dropcaps::first-letter{
@@ -229,7 +237,8 @@ p {
 
             /* Contact Form */
 #contact {
-    background-color: var(--light-beige);
+    background-color: var(--cream);
+    background-image: url("/img/asfalt-dark-texture.png");   
     padding: 30px 15px;
     color: var(--dark-gray);
     font-family: "Atkinson Hyperlegible Next";
@@ -246,7 +255,8 @@ form {
     margin: 0 auto;
 }
 fieldset {
-    background-color: var(--cream);
+    background-color: var(--light-beige);
+    background-image: url("/img/asfalt-dark-texture.png");   
     border: 2px solid var(--mushroom);
     border-radius: 10px;
     padding: 20px;

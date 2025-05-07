@@ -84,7 +84,6 @@ body {
 
 .navbar-links ul {
     flex-direction: column;
-    background-color: var(--light-beige);
     margin: 0;
     padding: 0;
     text-align: center;
